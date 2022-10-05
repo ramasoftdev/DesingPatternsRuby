@@ -1,17 +1,15 @@
-=begin
-1)
-  https://medium.com/@joshsaintjacque/ruby-the-strategy-pattern-16c98b99b373#:~:text=The%20Strategy%20pattern%20helps%20you,by%20the%20context%20at%20runtime.
-
-2)
-  https://refactoring.guru/es/design-patterns/strategy/ruby/example
-
-3)
-  https://dev.to/lccezinha/design-patterns-in-ruby-strategy-pattern-21he
-=end
+# 1)
+#   https://medium.com/@joshsaintjacque/ruby-the-strategy-pattern-16c98b99b373#:~:text=The%20Strategy%20pattern%20helps%20you,by%20the%20context%20at%20runtime.
+#
+# 2)
+#   https://refactoring.guru/es/design-patterns/strategy/ruby/example
+#
+# 3)
+#   https://dev.to/lccezinha/design-patterns-in-ruby-strategy-pattern-21he
 
 class Driver
   attr_reader :vehicle
-  
+
   def initialize(vehicle)
     @vehicle = vehicle
   end
@@ -27,7 +25,7 @@ class Vehicle
   def initialize(maximum_speed)
     @maximum_speed = maximum_speed
   end
-  
+
   def accelerate_to(target_speed)
     (0..maximum_speed).step(target_speed) do |speed|
       # go faster
